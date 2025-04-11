@@ -64,10 +64,20 @@ html{
     gap:1.6rem;
     padding:3.2rem;
     border-radius: 0.8rem;
-    width: 30.5rem;
+    width: 100%;
+    height: 100%;
+    box-shadow:  40px 50px 50px -30px rgba(72,85,106,0.24);
 }
 main{
     display: grid;
+    grid-template-columns: 30.5rem;
+    grid-template-rows: 40.5rem 24.6rem 22.6rem 41.4rem 50.3rem;
+    grid-template-areas: 
+    "m1"
+    "m2"
+    "m3"
+    "m4"
+    "m5";
     gap: 3.2rem; 
     justify-content: center;
     align-content: center;
@@ -116,18 +126,23 @@ header img{
 #daniel{
     background-color: var(--primary-color-500);
     position: relative;
+    grid-area: m1;
 }
 #jonathan{
     background-color: var(--secondary-color-500);
+    grid-area: m2;
 }
 #jeanette{
     background-color: var(--White);
+    grid-area: m3;
 }
 #patrick{
     background-color: var(--Dark-blue);
+    grid-area: m4;
 }
 #kira{
     background-color: var(--White);
+    grid-area: m5;
 }
 .quote{
     display: none;
@@ -157,34 +172,6 @@ header img{
         "m4 m4"
         "m5 m5";
     }
-    #daniel{
-        grid-area: m1;
-        width: 100%;
-        height: 100%;
-    }
-    #jonathan{
-        grid-area: m2;
-        width: 100%;
-        height: 100%;
-
-    }
-    #jeanette{
-        grid-area: m3;
-        width: 100%;
-        height: 100%;
-
-    }
-    #patrick{
-        grid-area: m4;
-        width: 100%;
-        height: 100%;
-
-    }
-    #kira{
-        grid-area: m5;
-        width: 100%;
-        height: 100%;
-    }
     .quote{
         display: block;
     }
@@ -198,34 +185,7 @@ header img{
         "m1 m1 m2 m5"
         "m3 m4 m4 m5";
         margin: 0;
-    }
-    #daniel{
-        grid-area: m1;
-        width: 100%;
-        height: 100%;
-    }
-    #jonathan{
-        grid-area: m2;
-        width: 100%;
-        height: 100%;
-
-    }
-    #jeanette{
-        grid-area: m3;
-        width: 100%;
-        height: 100%;
-
-    }
-    #patrick{
-        grid-area: m4;
-        width: 100%;
-        height: 100%;
-
-    }
-    #kira{
-        grid-area: m5;
-        width: 100%;
-        height: 100%;
+        gap: 2.4rem 3.2rem;
     }
     body{
         display: flex;
