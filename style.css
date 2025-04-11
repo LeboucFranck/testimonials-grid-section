@@ -1,0 +1,244 @@
+:root{
+    --primary-color-50: hsl(260, 100%, 95%);
+    --primary-color-300: hsl(264, 82%, 80%);
+    --primary-color-400: hsl(264, 81%, 70%);
+    --primary-color-500: hsl(263, 55%, 52%);
+    --secondary-color-100: hsl(214, 17%, 92%);
+    --secondary-color-200: hsl(0, 0%, 81%);
+    --secondary-color-300: hsl(215,10%,67%);
+    --secondary-color-400: hsl(224, 10%, 45%);
+    --secondary-color-500: hsl(217, 19%, 35%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 7%);
+    --Dark-blue: hsl(219, 29%, 14%);
+    --background-color: hsl(300,5%,96%);
+}
+.pc50{
+    color: var(--primary-color-50);
+}
+.pc300{
+    color: var(--primary-color-300);
+}
+.pc500{
+    color: var(--primary-color-500);
+}
+.sc100{
+    color: var(--secondary-color-100);
+}
+.sc200{
+    color: var(--secondary-color-200);
+}
+.sc300{
+    color:var(--secondary-color-300)
+}
+.sc400{
+    color: var(--secondary-color-400);
+}
+.sc500{
+    color: var(--secondary-color-500);
+}
+.db{
+    color: var(--Dark-blue);
+}
+.b{
+    color: var(--Black);
+}
+.w{
+    color: var(--White);
+}
+.bsi{
+    box-shadow: 0 0 0 2px var(--primary-color-400);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Barlow Semi Condensed';
+    background-color: var(--background-color);
+}
+.card{
+    display: grid;
+    gap:1.6rem;
+    padding:3.2rem;
+    border-radius: 0.8rem;
+    width: 30.5rem;
+}
+main{
+    display: grid;
+    gap: 3.2rem; 
+    justify-content: center;
+    align-content: center;
+    margin-top: 7.3rem;
+}
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 3rem;
+    align-items: center;
+}
+header img{
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 50%;
+    margin-right: 1.7rem;   
+}
+
+.author-info h2{
+    font-size: 1.3rem;
+    line-height: 1.40rem;
+    letter-spacing: 0;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+.author-info span{
+    display: block;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    letter-spacing: 0;
+}
+.card h3{
+    font-size: 2rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 600;
+    z-index: 1;
+
+}
+.card blockquote{
+    font-size: 1.3rem;
+    line-height: 1.80rem;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+#daniel{
+    background-color: var(--primary-color-500);
+    position: relative;
+}
+#jonathan{
+    background-color: var(--secondary-color-500);
+}
+#jeanette{
+    background-color: var(--White);
+}
+#patrick{
+    background-color: var(--Dark-blue);
+}
+#kira{
+    background-color: var(--White);
+}
+.quote{
+    display: none;
+    width: 10.4rem;
+    height: 10.2rem;
+    color: var(--primary-color-300);
+    position: absolute;
+    top: 0;
+    left: 37.6rem;
+}
+.attribution { 
+    margin: 2rem;
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a { 
+    text-decoration: none;
+    color: var(--primary-color-500) ; 
+}
+@media (min-width: 665px) and (max-width: 1119px) {
+    main{
+        grid-template-columns: 30.75rem 30.75rem;
+        grid-template-rows: 27rem 24.6rem 27rem 27.5rem;
+        grid-template-areas:
+        "m1 m1"
+        "m2 m3"
+        "m4 m4"
+        "m5 m5";
+    }
+    #daniel{
+        grid-area: m1;
+        width: 100%;
+        height: 100%;
+    }
+    #jonathan{
+        grid-area: m2;
+        width: 100%;
+        height: 100%;
+
+    }
+    #jeanette{
+        grid-area: m3;
+        width: 100%;
+        height: 100%;
+
+    }
+    #patrick{
+        grid-area: m4;
+        width: 100%;
+        height: 100%;
+
+    }
+    #kira{
+        grid-area: m5;
+        width: 100%;
+        height: 100%;
+    }
+    .quote{
+        display: block;
+    }
+  }
+
+  @media (min-width: 1120px) {
+    main{
+        grid-template-columns: 25.5rem 25.5rem 25.5rem 25.5rem;
+        grid-template-rows: 28.8rem 27rem;
+        grid-template-areas:
+        "m1 m1 m2 m5"
+        "m3 m4 m4 m5";
+        margin: 0;
+    }
+    #daniel{
+        grid-area: m1;
+        width: 100%;
+        height: 100%;
+    }
+    #jonathan{
+        grid-area: m2;
+        width: 100%;
+        height: 100%;
+
+    }
+    #jeanette{
+        grid-area: m3;
+        width: 100%;
+        height: 100%;
+
+    }
+    #patrick{
+        grid-area: m4;
+        width: 100%;
+        height: 100%;
+
+    }
+    #kira{
+        grid-area: m5;
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100vh;
+    }
+    .attribution{
+        position: absolute;
+        bottom: 10px;
+    }
+    .quote{
+        display: block;
+    }
+  }
